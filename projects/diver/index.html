@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DIVER-1: Scaling Intracranial EEG Foundation Models for Transferable Representations | Yonghyeon Gwon</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Yonghyeon Gwon</a></h1>
+        <img src="/profile.jpg" alt="Logo">
+        <p>M.S. candidate in Neuroscience<br>
+        Human Brain Function Laboratory<br>
+        Seoul National University<br><br>
+        <span class="sidebar-links">
+          <a href="mailto:gyh0321@snu.ac.kr">Email</a>
+          <a href="/Yonghyeon_Gwon_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://www.linkedin.com/in/yonghyeon-gwon-5b9995399/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </span></p>
+      </header>
+      <section>
+        <h1>DIVER-1: Scaling Intracranial EEG Foundation Models for Transferable Representations</h1>
+        <p><strong>Authors:</strong> Danny Dongyeop Han, Yonghyeon Gwon, Ahhyun Lucy Lee, Taeyang Lee, Seong Jin Lee, Jubin Choi, Sebin Lee, Jihyun Bang, Seungju Lee, David Keetae Park, Shinjae Yoo, Chun Kee Chung, Jiook Cha</p>
+
+        <p><img src="/diver1-architecture.jpg" alt="DIVER-1 architecture and evaluation pipeline" class="project-full-img"></p>
+
+        <h2>Overview</h2>
+        <p>DIVER-1 is a self-supervised intracranial EEG foundation model designed for recordings with variable electrode layouts, anatomical coverage, referencing schemes, and recording conditions. It learns reusable representations without assuming a fixed electrode montage.</p>
+
+        <p>Two model variants were pretrained on 5,310 hours of ECoG and SEEG data spanning approximately 352,000 channel-hours, enabling large-scale evaluation of transferable iEEG representations.</p>
+
+        <h2>Research Question</h2>
+        <p>Can large-scale self-supervised pretraining produce transferable iEEG representations across heterogeneous recordings, and which scaling factors most reliably improve downstream performance?</p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Combined any-variate electrode-time attention with spatiotemporal resampling and input-conditioned positional embeddings</li>
+          <li>Used multi-domain masked reconstruction to pretrain DIVER-1-0.1s and DIVER-1-1s without a fixed electrode montage</li>
+          <li>Evaluated transfer on Neuroprobe naturalistic cognitive decoding and MAYO seizure detection</li>
+          <li>Conducted compute-aware scaling experiments across data volume, subject count, training duration, and model size up to 1.8 billion parameters</li>
+        </ul>
+
+        <h2>Output</h2>
+        <p>DIVER-1 achieved strong transferable performance across both benchmarks, including the top AUROC on MAYO seizure detection. The scaling analysis indicates a data-constrained regime in which adding unique recordings and training sufficiently long are more reliable than increasing parameter count alone.</p>
+
+        <p>Ongoing project. Preprint available on arXiv.</p>
+        <p><a href="https://arxiv.org/abs/2512.19097" target="_blank" rel="noopener noreferrer">View the preprint on arXiv →</a></p>
+
+        <p><a href="/">← Back to homepage</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+  </body>
+</html>
